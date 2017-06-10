@@ -81,7 +81,7 @@
 // skills section 
 // --------------------------
  .show-skills {
-   background: $purple;
+   background-color: $purple;
 
    .skills h1, .skills h3, .skills p {
      @extend .fade-in;
@@ -100,7 +100,7 @@
 // contact section 
 // --------------------------
 .show-contact {
-  background: $blue;
+  background-color: $blue;
 
   .contact h1, .contact h3, .contact p {
     @extend .fade-in;

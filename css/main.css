@@ -6,24 +6,27 @@
   left: 0; }
 
 html {
-  background: #a1a7bc; }
+  background: url("../img/5.png") no-repeat right bottom #a1a7bc; }
 
 html, body {
   -webkit-transition: 2s background;
   -ms-transition: 2s background;
   transition: 2s background;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 12pt;
   color: #000000;
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%;
-  letter-spacing: 3px;
-  text-transform: uppercase; }
+  width: 100%; }
 
 header, footer, nav, section {
   display: block; }
+
+h1, a {
+  font-family: "Archivo Black", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px; }
 
 h1, h2, h3, p, .input-wrap {
   -webkit-transition: 1s all;
@@ -31,9 +34,16 @@ h1, h2, h3, p, .input-wrap {
   transition: 1s all;
   opacity: 0; }
 
+h1 {
+  margin: 0;
+  line-height: 1;
+  font-size: 40pt; }
+
 h3 {
-  font-size: 18pt;
-  padding: 15px 0;
+  font-family: "Caveat", cursive;
+  letter-spacing: 1px;
+  font-size: 20pt;
+  padding: 0 0 40px;
   padding-left: 50px;
   margin: 0;
   -webkit-transform: translate(-100px, 0);
@@ -42,18 +52,19 @@ h3 {
   h3:before {
     position: absolute;
     width: 40px;
-    height: 2px;
+    height: 3px;
     background: #ffffff;
     left: 0;
-    top: 32px;
+    top: 24px;
+    border-radius: 5px;
     content: ''; }
 
 a {
   text-decoration: none; }
 
 p {
-  font-size: 11pt;
-  line-height: 1.2;
+  font-size: 12pt;
+  line-height: 1.5;
   margin: 0;
   padding-bottom: 30px;
   margin-left: 20px;
@@ -133,7 +144,6 @@ p {
 .container {
   min-height: 100%;
   position: relative;
-  background: url("../img/5.png") no-repeat right bottom rgba(250, 250, 250, 0.25);
   background-attachment: fixed; }
 
 @media only screen and (max-width: 767px) {
@@ -342,7 +352,7 @@ nav.main-nav ul {
   bottom: -34px; }
 
 .show-skills {
-  background: #c051ff; }
+  background-color: #f73d3d; }
   .show-skills section.skills > div {
     opacity: 1; }
 
@@ -350,7 +360,7 @@ nav.main-nav ul {
   .skills.tab {
     padding-top: 70px; } }
 .show-contact {
-  background: #518aff; }
+  background-color: #518aff; }
   .show-contact .input-wrap {
     opacity: 1;
     -webkit-transform: translate(0, 0);
