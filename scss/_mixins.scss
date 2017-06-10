@@ -1,0 +1,27 @@
+// Mixins
+// --------------------------
+
+@mixin transition($value) {
+  -webkit-transition: $value;
+        -ms-transition: $value;
+            transition: $value;
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+        -ms-transform: translate($x, $y);
+            transform: translate($x, $y);
+}
+
+@mixin scale($x, $y) {
+  -webkit-transform: scale($x, $y);
+        -ms-transform: scale($x, $y);
+            transform: scale($x, $y);
+}
+
+@mixin exbutton() {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+@mixin exbutton2() {
+  transform: rotate(-45deg) translate(3px, -4px);
+}

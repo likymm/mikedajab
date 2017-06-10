@@ -1,0 +1,160 @@
+@import 'variables';
+@import 'mixins';
+@import 'general';
+
+.fade-in {
+  opacity: .8;
+  @include translate(0, 0);
+}
+
+.tab {
+   display: flex;
+   flex-wrap: wrap;
+
+    & > .col {
+     width: 49%;
+     display: inline-block;
+
+      .wrap {
+        padding: 70px;
+        word-wrap: break-word;
+      }
+   }
+}
+
+@media only screen and (max-width: $mobile) {
+  .tab > .col {
+    width: 100%;
+    display: block;
+      .wrap {
+      padding: 15px;
+    }
+  }
+}
+ 
+// intro section 
+// --------------------------
+.intro {
+  display: none;
+  padding: 0 10%;
+  height: 100%;
+
+  h1 {
+    @extend .title;
+    font-size: 110pt;
+    line-height: 1;
+    margin: 0;
+    padding-top: 80px;
+  }
+  @media only screen and (max-width: $mobile) {
+    h1 {
+      font-size: 40pt;
+    }
+  }
+
+  p {
+    max-width: 550px;
+    padding-bottom: 120px;
+  }
+}
+
+.show-intro .intro {
+  display: block;
+}
+.show-intro .intro h1, .show-intro .intro h3, .show-intro .intro p {
+  @extend .fade-in;
+}
+
+ .show-intro .intro .scroll-arrow {
+   opacity: .5;
+   @include translate(0, 0);
+ }
+
+ .show-intro .intro .scroll-arrow :before {
+    height: 41px;
+    top: 0;
+ }
+ .show-intro .intro .scroll-arrow :after {
+    bottom: -34px;
+ }
+
+// skills section 
+// --------------------------
+ .show-skills {
+   background: $purple;
+
+   .skills h1, .skills h3, .skills p {
+     @extend .fade-in;
+   }
+
+   section.skills > div {
+     opacity: 1;
+   }
+ }
+ @media only screen and (max-width: $mobile) {
+  .skills.tab {
+     padding-top: 70px;
+  }
+ }
+
+// contact section 
+// --------------------------
+.show-contact {
+  background: $blue;
+
+  .contact h1, .contact h3, .contact p {
+    @extend .fade-in;
+  }
+
+  .input-wrap {
+    opacity: 1;
+    @include translate(0, 0);
+  }
+}
+ @media only screen and (max-width: $mobile) {
+  .contact.tab {
+     padding-top: 70px;
+  }
+}
+
+.input-wrap {
+    @include translate(0, 50px);
+}
+.form-input {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 12pt;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.12);
+    @include transition(.5s background);
+
+    &:focus {
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+
+textarea.form-input {
+  height: 100px;
+}
+
+.form-input[type="submit"] {
+  padding: 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  border: solid 2px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(0, 0, 0, .9);
+  }
+}
+
+.form-input::-webkit-input-placeholder {
+  color: $black;
+  opacity: .3;
+}
