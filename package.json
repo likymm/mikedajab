@@ -1,0 +1,26 @@
+{
+  "name": "mikedajab.com",
+  "version": "1.0.0",
+  "description": "this project is for armand michael \"\"\u001b[Dmdajab portfolio website",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/likymm/mikedajab.git"
+  },
+  "keywords": [
+    "portfolio",
+    "mike",
+    "dajab"
+  ],
+  "author": "armand michael dajab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/likymm/mikedajab/issues"
+  },
+  "homepage": "https://github.com/likymm/mikedajab#readme"
+}
