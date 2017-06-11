@@ -72,6 +72,10 @@ p {
   -ms-transform: translate(0, 20px);
   transform: translate(0, 20px); }
 
+.post-script {
+  font-family: "Caveat", cursive;
+  font-size: 15pt; }
+
 .text-white {
   color: #ffffff; }
 
@@ -207,10 +211,39 @@ nav.hamburger {
     -ms-transform: scale(0, 1);
     transform: scale(0, 1);
     width: 35px; }
+  nav.hamburger:before {
+    position: absolute;
+    content: '';
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    top: -13px;
+    left: -10px;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    transform: scale(0, 0); }
+  nav.hamburger:hover:before {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    animation: hamburgerHover 1s; }
 
 @media only screen and (max-width: 767px) {
   nav.hamburger {
     right: 20px; } }
+@keyframes hamburgerHover {
+  from {
+    opacity: .5;
+    -webkit-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5); }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(2, 2);
+    -ms-transform: scale(2, 2);
+    transform: scale(2, 2); } }
 nav.main-nav ul {
   -webkit-transition: 0.2s all;
   -ms-transition: 0.2s all;
@@ -379,6 +412,7 @@ nav.main-nav ul {
   font-family: 'Archivo Black', sans-serif;
   font-size: 12pt;
   width: 100%;
+  max-width: 100%;
   border: none;
   padding: 10px;
   margin-bottom: 10px;

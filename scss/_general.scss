@@ -11,7 +11,7 @@ html {
 html, body {
     @extend .fluid;
     @include transition(2s background);
-    font-family: $font-family;
+    font-family: $san-serif;
     font-size: $fontsize;
     color: $black;
     margin: 0;
@@ -30,7 +30,7 @@ header {
     @extend .fluid;
 }
 
-h1, a { font-family: $font-family2; text-transform: uppercase; letter-spacing: 3px; }
+h1, a { font-family: $title; text-transform: uppercase; letter-spacing: 3px; }
 
 h1, h2, h3, p, .input-wrap {
   @include transition(1s all);
@@ -44,7 +44,7 @@ h1 {
 }
 
 h3 {
-  font-family: $font-family3;
+  font-family: $script;
   letter-spacing: 1px;
   font-size: 20pt;
   padding: 0 0 40px;
@@ -72,6 +72,11 @@ p {
     padding-bottom: 30px;
     margin-left: 20px;
     @include translate(0, 20px);
+ }
+
+ .post-script {
+   font-family: $script;
+   font-size: 15pt;
  }
 
 .text-white { color: $white }
@@ -224,11 +229,40 @@ nav.hamburger {
       width: 35px;
     }
   }
+  &:before {
+    position: absolute;
+    content: '';
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    top: -13px;
+    left: -10px;
+    border-radius: 50%;
+    opacity: 0;
+    @include scale(0, 0);
+  }
+
+  &:hover {
+    &:before {
+      @include scale(1, 1);
+      animation: hamburgerHover 1s;
+    }
+  }
 }
 @media only screen and (max-width: $mobile) { 
   nav.hamburger {
     right: 20px;
   }
+}
+@keyframes hamburgerHover {
+    from {
+      opacity: .5;
+      @include scale(.5, .5);
+    }
+    to {
+      opacity: 0;
+      @include scale(2, 2);
+    }
 }
 
 nav.main-nav ul {
